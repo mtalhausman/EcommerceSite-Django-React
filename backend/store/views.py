@@ -13,7 +13,6 @@ def get_products(request):
     return Response(serializer.data)
 
 @api_view(['GET'])
-
 def get_categories(request):
     categories=Category.objects.all()
     serializer=CategorySerializer(categories,many=True)
